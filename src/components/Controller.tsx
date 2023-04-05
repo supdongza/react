@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Controller = ({ count, setCount }: Props) => {
-  const controllerList = ["-1", "-10", "-100", "+100", "+10", "-1"];
+  const controllerList = ["-1", "-10", "-100", "+100", "+10", "+1"];
 
   const handleCount = (e: MouseEvent<HTMLButtonElement>) => {
     const value = Number(e.currentTarget.textContent);
