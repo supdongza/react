@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, MouseEvent } from "react";
 import styled from "styled-components";
 
 interface Props {
@@ -9,8 +9,8 @@ interface Props {
 const Controller = ({ count, setCount }: Props) => {
   const controllerList = ["-1", "-10", "-100", "+100", "+10", "-1"];
 
-  const handleCount = (e: any) => {
-    const value = Number(e.target.textContent);
+  const handleCount = (e: MouseEvent<HTMLButtonElement>) => {
+    const value = Number(e.currentTarget.textContent);
     setCount(count + value);
   };
 
